@@ -1,0 +1,28 @@
+@import url("../../variables.m.css");
+
+@media (min-width: 1280px) {
+	.root {
+		display: grid;
+		grid-template-columns: [main] 1fr [media] 54%;
+		grid-column-gap: 4rem;
+		align-items: center;
+	}
+}
+.main {
+	grid-column: main;
+}
+.media {
+	display: none;
+}
+@media (min-width: 300px) {
+	.media {
+		display: block;
+		margin: 0 calc(var(--side-margin) * -1);
+	}
+}
+@media (min-width: 1280px) {
+	.media {
+		margin: 0;
+		grid-column: media;
+	}
+}

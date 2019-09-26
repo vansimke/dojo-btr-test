@@ -1,0 +1,66 @@
+@import url("../../variables.m.css");
+
+.rootalt,
+.root {
+	--vertical-padding: 2.4rem;
+	background-color: var(--white);
+	padding: var(--vertical-padding) var(--side-margin);
+}
+
+@media (min-width: 1280px) {
+	.rootalt,
+	.root {
+		--vertical-padding: 4.5rem;
+	}
+}
+.rootalt {
+	background-color: var(--offwhite);
+}
+.heading {
+	font: 700 2rem Google Sans, sans-serif;
+	color: var(--grey);
+	text-align: center;
+	position: relative;
+	margin-top: 0;
+}
+@media (min-width: 480px) {
+	.heading {
+		text-transform: lowercase;
+		text-align: left;
+	}
+	.heading:before {
+		content: "chrome://";
+		color: var(--lightgrey);
+	}
+}
+.slugdash {
+	content: " ";
+}
+@media (min-width: 720px) {
+	.slugdash:before {
+		content: "-";
+	}
+}
+.headingsplit {
+	margin: 1.66rem 0;
+	text-align: center;
+}
+@media (min-width: 480px) {
+	.headingsplit {
+		text-align: left;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+	}
+	.headingsplit > :first-child {
+		flex: 1;
+		margin-right: 0.5em;
+	}
+	.headingsplit > * {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+.headinglink {
+	display: block;
+}

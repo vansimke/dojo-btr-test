@@ -1,0 +1,149 @@
+@import "../variables.m.css";
+
+.root {
+	--icon-size: 1.6em;
+	padding-bottom: 0;
+	padding-top: 1.8rem;
+
+	--vertical-padding: 2.4rem;
+	background-color: var(--white);
+	padding: var(--vertical-padding) var(--side-margin);
+}
+
+.divider {
+	display: none;
+	grid-area: divider;
+	margin-top: 1.1rem;
+}
+.social {
+	grid-area: social;
+	margin: 1rem 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	list-style: none;
+	padding: 0;
+}
+.socialitem {
+	margin: 0 0.5rem;
+	line-height: var(--icon-size);
+	height: var(--icon-size);
+}
+.socialitem:first-of-type {
+	margin-left: 0;
+}
+
+.socialitemlink {
+	margin: 0 0.5rem;
+	line-height: var(--icon-size);
+	height: var(--icon-size);
+}
+
+.iconmask {
+	background: var(--midgrey);
+	-webkit-mask-image: var(--icon);
+	mask-image: var(--icon);
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
+
+	width: var(--icon-size);
+	height: var(--icon-size);
+	display: inline-block;
+	overflow: hidden;
+	color: transparent;
+}
+
+.icontwitter {
+	--icon: url(/assets/img/twitter.svg);
+}
+.iconyoutube {
+	--icon: url(/assets/img/youtube.svg);
+}
+.iconemail {
+	--icon: url(/assets/img/email.svg);
+}
+.icongithub {
+	--icon: url(/assets/img/github.svg);
+}
+.logo {
+	background-image: url(/assets/img/g.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	grid-area: logo;
+	height: 2.6rem;
+}
+.legal {
+	list-style: none;
+	padding: 0;
+
+	grid-area: legal;
+	white-space: nowrap;
+	margin: 1rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--midgrey);
+}
+.legalitem {
+	margin: 1rem 0;
+	--icon-size: 1.4em;
+}
+.legalitem:first-of-type {
+	margin-left: 0;
+}
+.legalitemlink {
+	color: var(--midgrey);
+	text-decoration: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.legalitemlinkspan {
+	margin-right: 0.3em;
+}
+@media (min-width: 720px) {
+	.root {
+		display: grid;
+		grid-template-rows: 1fr auto auto;
+		grid-template-columns: 1fr auto auto;
+		grid-template-areas: "logo logo logo" "divider divider divider" "social language legal";
+	}
+
+	.divider {
+		display: block;
+		border-top: 1px solid var(--darkoffwhite);
+	}
+
+	.social {
+		justify-content: flex-start;
+	}
+
+	.logo {
+		background-image: url(/assets/img/fullgoogle.svg);
+		margin: 0;
+		background-position: 0 0;
+	}
+
+	.legal {
+		font-size: 0.6rem;
+		flex-direction: row;
+	}
+
+	.legalitem {
+		margin: 0 0.8rem;
+	}
+}
+
+@media (min-width: 1280px) {
+	.root {
+		--vertical-padding: 4.5rem;
+	}
+}

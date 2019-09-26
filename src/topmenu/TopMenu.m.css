@@ -1,0 +1,148 @@
+@import "../variables.m.css";
+
+.root {
+	background: #fff;
+	position: relative;
+	z-index: 1;
+	padding-bottom: 1px;
+}
+@media (min-width: 720px) {
+	.root {
+		padding: 0.5em 1em;
+		position: sticky;
+		top: 0;
+		display: grid;
+		grid-template-columns: [title] max-content 2.6em [reg] 1fr [extra-links] max-content;
+		place-items: center start;
+		font-size: 0.8rem;
+	}
+}
+@media (min-width: 960px) {
+	.root {
+		font-size: 1rem;
+	}
+}
+@media (min-width: 720px) {
+	:target {
+		--scroll-padding: 100px;
+		margin-top: calc(var(--scroll-padding) * -1);
+		padding-top: var(--scroll-padding);
+	}
+}
+.title {
+	margin: 4.6em 0;
+	text-decoration: none;
+	display: block;
+}
+@media (min-width: 720px) {
+	.title {
+		margin: 0;
+		display: grid;
+		grid-template-columns: 2.9em 1fr;
+		grid-gap: 0.7em;
+		align-items: center;
+	}
+}
+.logocontainer {
+	width: 20%;
+	margin: 0 auto;
+}
+@media (min-width: 720px) {
+	.logocontainer {
+		width: 100%;
+	}
+}
+.titletext {
+	font-family: Google Sans, roboto, sans-serif;
+	line-height: 0.9;
+	text-align: center;
+}
+@media (min-width: 720px) {
+	.titletext {
+		line-height: 1.1;
+		text-align: left;
+	}
+}
+.titlemain {
+	font-size: 9vw;
+	color: var(--midgrey);
+}
+@media (min-width: 720px) {
+	.titlemain {
+		font-size: 0.98em;
+	}
+}
+.titleyear {
+	display: block;
+	color: var(--darkgrey);
+	font-size: 23.1vw;
+}
+@media (min-width: 720px) {
+	.titleyear {
+		font-size: 1.4em;
+	}
+}
+.register {
+	grid-area: 1 / reg;
+	position: absolute;
+	left: 50%;
+	top: 100%;
+	transform: translate(-50%, -50%);
+}
+@media (min-width: 720px) {
+	.register {
+		position: relative;
+		transform: none;
+		left: 0;
+		top: 0;
+	}
+}
+.extralinks {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 4em 0;
+}
+@media (min-width: 720px) {
+	.extralinks {
+		margin: 0;
+		grid-column: extra-links;
+	}
+}
+.extralink {
+	font-family: Google Sans, roboto, sans-serif;
+	line-height: normal;
+	font-size: 0.8em;
+	margin: 0.5em 0.55em;
+}
+@media (min-width: 320px) {
+	.extralink {
+		margin: 0.5em 0.7em;
+	}
+}
+@media (min-width: 450px) {
+	.extralink {
+		font-size: 1em;
+	}
+}
+@media (min-width: 720px) {
+	.extralink {
+		margin: 0 0.7em;
+		font-size: 0.8em;
+		color: var(--offblack);
+		text-decoration: none;
+	}
+	.extralink:hover {
+		color: var(--link-color);
+	}
+}
+@media (min-width: 720px) {
+	.community {
+		display: none;
+	}
+}
+@media (min-width: 780px) {
+	.community {
+		display: inline;
+	}
+}

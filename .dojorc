@@ -1,0 +1,7 @@
+{
+	"_build-app": {
+		"build-time-render": {
+			"root": "app"
+		}
+	}
+}

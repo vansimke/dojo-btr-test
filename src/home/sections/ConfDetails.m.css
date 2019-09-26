@@ -1,0 +1,179 @@
+@import url("../../variables.m.css");
+
+.root {
+	overflow: hidden;
+	position: relative;
+	line-height: normal;
+	background: var(--offwhite);
+	padding: 4.4rem 0;
+}
+@media (min-width: 720px) {
+	.root {
+		height: 90vh;
+		display: flex;
+		align-items: center;
+		background: linear-gradient(180deg, #fff, var(--offwhite));
+		padding: 0;
+	}
+}
+@media (min-width: 1920px) {
+	.root {
+		padding: 0 calc((100vw - 1920px) / 2);
+	}
+}
+.confdetail {
+	text-align: center;
+	margin: 0 var(--side-margin);
+	color: var(--darkgrey);
+	position: relative;
+}
+@media (min-width: 720px) {
+	.confdetail {
+		text-align: left;
+	}
+}
+.month {
+	text-transform: lowercase;
+}
+.date {
+	font-family: Google Sans, roboto, sans-serif;
+	font-weight: 700;
+	font-size: 2.14rem;
+	display: block;
+	margin: 0.25em 0;
+	line-height: 1;
+}
+@media (min-width: 720px) {
+	.date {
+		font-size: 3.24rem;
+	}
+}
+.locationmain,
+.locationsub {
+	display: block;
+	font-size: 1.25rem;
+}
+.locationsub {
+	font-weight: 300;
+	margin: 0.35em 0;
+}
+@media (min-width: 720px) {
+	.locationsub {
+		margin: 0.2em 0;
+	}
+}
+.about {
+	max-width: 530px;
+	line-height: 2;
+	margin: 2.1em auto;
+}
+@media (min-width: 720px) {
+	.actions {
+		margin: 3.2rem 0 4rem;
+		display: grid;
+		grid-auto-columns: max-content;
+		grid-auto-flow: column;
+		align-items: start;
+		grid-gap: 1.6em;
+	}
+}
+.register {
+	display: none;
+}
+@media (min-width: 720px) {
+	.register {
+		display: block;
+	}
+}
+.cal {
+	font-size: 0.75rem;
+	padding: 0.9em 0;
+	display: block;
+	position: relative;
+	white-space: nowrap;
+}
+@media (min-width: 720px) {
+	.cal {
+		--icon-size: 1.5rem;
+		padding-left: calc(var(--icon-size) + 0.6em);
+	}
+	.cal:before {
+		content: "";
+		background: url("/assets/img/calendar.svg") no-repeat;
+		background-size: contain;
+		width: var(--icon-size);
+		height: var(--icon-size);
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+}
+.getupdates {
+	font-size: 0.75rem;
+	padding: 0.9em 0;
+	display: block;
+	white-space: nowrap;
+}
+.dinocrossing {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform-origin: 50% 100%;
+	transform: scale(0.5);
+	display: none;
+}
+@media (min-width: 720px) {
+	.dinocrossing {
+		display: block;
+	}
+}
+@media (min-width: 880px) {
+	.dinocrossing {
+		transform: none;
+	}
+}
+.sign {
+	position: absolute;
+	bottom: 0;
+	left: calc(50% + 36vh);
+	height: 65vh;
+	overflow: visible;
+}
+.signpath {
+	stroke: var(--midgrey);
+	fill: #fff;
+	stroke-width: 4px;
+	vector-effect: non-scaling-stroke;
+}
+.crossingpath {
+	stroke: var(--midgrey);
+	stroke-width: 0.04px;
+}
+.signdino {
+	fill: var(--midgrey);
+}
+.signdinooutline {
+	fill: none;
+	stroke: #fff;
+	stroke-width: 40;
+}
+.dinos {
+	position: absolute;
+	bottom: 0;
+	height: 100%;
+	left: 50%;
+	display: grid;
+	grid-auto-columns: min-content;
+	grid-auto-flow: column;
+	align-items: end;
+	grid-gap: 2vh;
+}
+.parentdino {
+	height: 48vh;
+}
+.babydino {
+	height: 10vh;
+}

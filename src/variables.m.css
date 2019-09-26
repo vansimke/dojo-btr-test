@@ -1,0 +1,29 @@
+:root {
+	--white: #fff;
+	--offwhite: #f8f9fa;
+	--darkoffwhite: #dadce0;
+	--lightgrey: #9aa0a6;
+	--midgrey: #80868b;
+	--grey: #707070;
+	--darkgrey: #5f6368;
+	--offblack: #3c4043;
+	--black: #202124;
+	--blue: #1a73e8;
+	--blue-a25: rgba(26, 115, 232, 0.25);
+	--lightblue: #d7e4f4;
+	--darkblue: #1458b3;
+	--link-color: var(--blue);
+	--link-hover-color: var(--darkblue);
+}
+
+@media (min-width: 1920px) {
+	:root {
+		--side-margin: calc((100vw - 1920px) / 2 + 4.6rem);
+	}
+}
+
+@media (min-width: 720px) {
+	:root {
+		--side-margin: 4.6rem;
+	}
+}

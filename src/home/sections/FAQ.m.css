@@ -1,0 +1,51 @@
+.root {
+	background: var(--offwhite);
+}
+@media (min-width: 500px) {
+	.faqcontainer {
+		overflow-x: auto;
+		padding: 1rem 0;
+		margin: 0 calc(var(--side-margin) * -1);
+		margin-top: -1rem;
+	}
+}
+@media (min-width: 500px) {
+	.faqs {
+		padding: 0 var(--side-margin);
+		display: inline-grid;
+		grid-auto-columns: max-content;
+		grid-auto-flow: column dense;
+		--grid-gap: 3.9rem;
+		grid-gap: var(--grid-gap);
+		align-items: start;
+	}
+}
+.faq {
+	background: #fff;
+	overflow: hidden;
+	border-radius: 1rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.13);
+	padding: 0 1.6rem;
+	margin: 2rem 0;
+	font-size: 0.8rem;
+}
+@media (min-width: 500px) {
+	.faq {
+		width: 20rem;
+		margin: 0;
+	}
+}
+.faqheading {
+	color: var(--darkgrey);
+	margin: 1.2rem 0 0;
+	font-weight: 500;
+}
+.faqcontent {
+	color: var(--midgrey);
+}
+.faqcontent > :first-child {
+	margin-top: 0.5rem;
+}
+.faqcontent > :last-child {
+	margin-bottom: 1.2rem;
+}
